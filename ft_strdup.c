@@ -10,7 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	
+	int i = 0;
+	char *res;
+
+	while(s[i])
+		i++;
+	res = (char*)malloc(sizeof(*res) * i + 1);
+	if (res == NULL)
+		return (NULL);
+	i = 0;
+	while(s[i])
+	{
+		res[i]=s[i];
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
 }
