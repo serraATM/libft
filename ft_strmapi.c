@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulserr <raulserr@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: raulserr <raulserr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 14:14:15 by raulserr          #+#    #+#             */
-/*   Updated: 2025/02/04 16:08:08 by raulserr         ###   ########.fr       */
+/*   Updated: 2025/02/05 13:31:40 by raulserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

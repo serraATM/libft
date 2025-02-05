@@ -3,23 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulserr <raulserr@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: raulserr <raulserr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:31:43 by raulserr          #+#    #+#             */
-/*   Updated: 2025/01/17 16:33:25 by raulserr         ###   ########.fr       */
+/*   Updated: 2025/02/05 16:22:46 by raulserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_toupper(char *str)
-{
-	int	cont;
+#include "libft.h"
 
-	cont = 0;
-	while (str[cont] != '\0')
-	{
-		if (str[cont] >= 'a' && str[cont] <= 'z')
-			str[cont] -= 32;
-		cont++;
-	}
-	return (str);
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }

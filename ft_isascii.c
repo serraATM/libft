@@ -3,23 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulserr <raulserr@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: raulserr <raulserr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:52:14 by raulserr          #+#    #+#             */
-/*   Updated: 2025/01/15 11:59:28 by raulserr         ###   ########.fr       */
+/*   Updated: 2025/02/05 16:09:12 by raulserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char *str)
-{
-	int	cont;
+#include "libft.h"
 
-	cont = 0;
-	while (str[cont] != '\0')
-	{
-		if ((str[cont] < 0) || (str[cont] > 255))
-			return (0);
-		cont++;
-	}
-	return (1);
+int	ft_isascii(int c)
+{
+	if ((c >= 0) && (c <= 127))
+		return (1);
+	return (0);
 }

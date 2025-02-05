@@ -3,27 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulserr <raulserr@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: raulserr <raulserr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:46:39 by raulserr          #+#    #+#             */
-/*   Updated: 2025/01/15 11:49:21 by raulserr         ###   ########.fr       */
+/*   Updated: 2025/02/05 16:06:13 by raulserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char *str)
-{
-	int	cont;
+#include "libft.h"
 
-	cont = 0;
-	while (str[cont] != '\0')
+int	ft_isalnum(int c)
+{
+	if ((c >= 'a' && c <= 'z') || ((c >= 'A' && c <= 'Z') || ((c >= '0')
+				&& (c <= '9'))))
 	{
-		if ((str[cont] < 'a' || str[cont] > 'z')
-			&& (str[cont] < 'A' || str[cont] > 'Z')
-			&& (str[cont] < '0') || (str[cont] > '9'))
-		{
-			return (0);
-		}
-		cont++;
+		return (1);
 	}
-	return (1);
+	return (0);
 }

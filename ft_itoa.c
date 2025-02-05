@@ -3,22 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulserr <raulserr@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: raulserr <raulserr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 12:29:10 by raulserr          #+#    #+#             */
-/*   Updated: 2025/02/04 13:32:07 by raulserr         ###   ########.fr       */
+/*   Updated: 2025/02/05 17:00:45 by raulserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stlib.h>
+#include "libft.h"
 
 static int	lenght(int n)
 {
 	int	i;
 
 	i = 1;
-	while (n)
+	while (n > 0)
+	{
+		n = n / 10;
 		i++;
+	}
 	return (i);
 }
 

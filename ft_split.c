@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulserr <raulserr@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: raulserr <raulserr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:43:42 by raulserr          #+#    #+#             */
-/*   Updated: 2025/01/29 13:34:09 by raulserr         ###   ########.fr       */
+/*   Updated: 2025/02/05 13:22:50 by raulserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static size_t	ft_count(char const *s, char c)
 {
@@ -29,7 +31,7 @@ static size_t	ft_count(char const *s, char c)
 	return (count);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	size_t	len;
@@ -37,7 +39,7 @@ char **ft_split(char const *s, char c)
 
 	i = 0;
 	str = (char **)malloc((ft_count(s, c) + 1) * sizeof(char *));
-	if (!s || !lst)
+	if (!s || !str)
 		return (0);
 	while (*s)
 	{
@@ -54,5 +56,5 @@ char **ft_split(char const *s, char c)
 		}
 	}
 	str[i] = '\0';
-	return (lst);
+	return (str);
 }
