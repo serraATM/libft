@@ -6,7 +6,7 @@
 /*   By: raulserr <raulserr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 17:20:43 by raulserr          #+#    #+#             */
-/*   Updated: 2025/02/05 13:31:52 by raulserr         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:22:53 by raulserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		i++;
 	}
 	return (0);
-
 }
