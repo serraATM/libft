@@ -13,7 +13,10 @@ SRC = ft_atoi.c ft_isprint.c ft_putchar_fd.c ft_strlcat.c ft_strrchr.c \
       ft_isdigit.c ft_memset.c ft_strjoin.c ft_strnstr.c \
       ft_strtrim.c ft_putnbr_fd.c ft_putendl_fd.c 
 
+SRC_bonus = ft_lstnew_bonus.c
+
 OBJ = $(SRC:.c=.o)
+OBJ_bonus = $(SRC_bonus:.c=.o)
 
 all: $(NAME)
 
@@ -24,11 +27,14 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(OBJ_bonus)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus: $(NAME) $(OBJ_bonus)
+	$(AR) $(NAME) $(OBJ_bonus)
+
+.PHONY: all clean fclean re bonus

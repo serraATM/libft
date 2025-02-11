@@ -6,7 +6,7 @@
 /*   By: raulserr <raulserr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 12:29:10 by raulserr          #+#    #+#             */
-/*   Updated: 2025/02/06 13:07:40 by raulserr         ###   ########.fr       */
+/*   Updated: 2025/02/06 15:28:33 by raulserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,10 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+// int main(int argc,char **argv)
+// {
+// 	if(argc < 2)
+// 		return(1);
+// 	printf("%s",ft_itoa(atoi(argv[1])));
+// 	return(0);
+// }
